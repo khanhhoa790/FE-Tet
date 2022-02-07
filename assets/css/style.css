@@ -311,6 +311,12 @@
   margin-bottom: 15px;
 }
 
+@media (max-width: 1200px) {
+  .chooses .choose-content .choose-heading {
+    text-align: center;
+  }
+}
+
 .chooses .choose-content .choose-subheading {
   color: #081843;
   font-family: "Montserrat", sans-serif;
