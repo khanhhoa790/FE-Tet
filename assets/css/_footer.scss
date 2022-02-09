@@ -16,14 +16,20 @@
     }
   }
 
-  address ul li {
-    font-family: "Montserrat", sans-serif;
-    line-height: 156%;
-    letter-spacing: -0.015em;
-    color: #464646;
-    font-style: none;
+  address {
+    ul li {
+      font-family: "Montserrat", sans-serif;
+      line-height: 156%;
+      letter-spacing: -0.015em;
+      color: #464646;
+      font-style: none;
+      text-decoration: none;
+      a {
+        text-decoration: none;
+        color: #464646;
+      }
+    }
   }
-
   .social {
     display: flex;
     gap: 0 15px;

@@ -1,3 +1,28 @@
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #2f65c2;
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 13px 43px;
+  margin-bottom: 35px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: #2f65c2;
+}
+
+.btn:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .navbar-nav {
   -webkit-column-gap: 60px;
           column-gap: 60px;
@@ -123,31 +148,6 @@
   #banner .banner-content {
     text-align: left;
   }
-}
-
-.btn {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 150%;
-  color: #2f65c2;
-  background-color: #ffffff;
-  border-radius: 3px;
-  padding: 13px 43px;
-  margin-bottom: 35px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  color: #ffffff;
-  background-color: #2f65c2;
-}
-
-.btn:focus {
-  outline: none !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 .about {
@@ -384,7 +384,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: calc((100% / $col) - 24px);
 }
 
 .clients .client-heading {
@@ -410,6 +409,7 @@
 
 .recents {
   background-color: #2f65c2;
+  padding-bottom: 36px;
 }
 
 .recents .recent-heading {
@@ -421,6 +421,38 @@
   font-weight: 700;
   padding-top: 86px;
   margin-bottom: 50px;
+}
+
+.recents .btn-viewall {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #2f65c2;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  color: #ffffff;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 50px;
+  padding: 13px 43px;
+  -webkit-transition: 0.5 ease-in;
+  transition: 0.5 ease-in;
+}
+
+.recents .btn-viewall:hover {
+  color: #2f65c2;
+  background-color: #ffffff;
+}
+
+.recents .btn-viewall:focus {
+  outline: none !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .recent-card {
@@ -437,7 +469,7 @@
   background-color: #ffffff;
   -webkit-box-shadow: 0px 5px 25px 0px #00000026;
           box-shadow: 0px 5px 25px 0px #00000026;
-  width: calc(width - $spacing);
+  width: calc(100% / 3 - 24px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -445,6 +477,23 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 992px) {
+  .recent-card-item {
+    width: calc(100% / 2 - 24px);
+    margin-left: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recent-card-item {
+    width: calc(100% / 1 - 24px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 12px;
+  }
 }
 
 .recent-card-item-img {
@@ -476,12 +525,12 @@
   margin-right: 10px;
 }
 
-.recent-card-item .container-card recent-card-calendar {
+.recent-card-item .container-card .recent-card-calendar {
   margin-bottom: 6px;
 }
 
 .recent-card-item .container-card .date {
-  color: var(--secondary-color);
+  color: #081843;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   line-height: 150%;
@@ -496,7 +545,7 @@
   font-size: 20px;
   line-height: 148%;
   letter-spacing: -0.015em;
-  color: var(--primary-color);
+  color: #2f65c2;
   margin-bottom: 18px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -504,26 +553,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-all;
-}
-
-.recent-card .btn.btn-viewall {
-  display: inline-block;
-  background-color: var(--primary-color);
-  border: 2px solid #ffffff;
-  border-radius: 5px;
-  color: #ffffff;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin-top: 50px;
-  -webkit-transition: 0.3 ease-in;
-  transition: 0.3 ease-in;
-}
-
-.recent-card .btn.btn-viewall:hover {
-  color: var(--primary-color);
-  background-color: #ffffff;
 }
 
 .contact {
@@ -553,6 +582,12 @@
   letter-spacing: -0.015em;
   color: #464646;
   font-style: none;
+  text-decoration: none;
+}
+
+.contact address ul li a {
+  text-decoration: none;
+  color: #464646;
 }
 
 .contact .social {

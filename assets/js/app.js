@@ -1,7 +1,7 @@
-const header = document.querySelector(".header");
-const hambugerBar = document.querySelector(".menu-hamburger");
-const menu = document.querySelector(".menu");
-
-hambugerBar.addEventListener("click", function () {
-  menu.classList.toggle("menu-active");
-});
+// $(document).ready(function () {
+//   $(".recent-card").slick({
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//   });
+// });

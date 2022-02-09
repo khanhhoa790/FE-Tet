@@ -17,7 +17,6 @@
     &-item {
       display: flex;
       flex-direction: column;
-      width: calc((100% / $col) - 24px);
       @media (max-width: 992px) {
         $col: 2;
       }
